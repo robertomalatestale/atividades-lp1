@@ -16,5 +16,10 @@ class FuncionarioTest {
     public void deveCalcularNovoSalario(){
         assertEquals(1650,joao.aumentaSalario(0.1));
     }
+
+    @Test
+    public void deveCalcularSalarioLiquido(){
+        assertEquals(1748,joao.calculaSalarioLiquido(2,200));
+    }
 }
 

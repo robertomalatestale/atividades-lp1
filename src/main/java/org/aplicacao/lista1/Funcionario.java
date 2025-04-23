@@ -32,4 +32,8 @@ public class Funcionario {
     public double aumentaSalario (double porcentagemAumento){
         return this.salario + calculaAumento(porcentagemAumento);
     }
+
+    public double calculaSalarioLiquido (int numeroHorasExtras, double valorHorasExtras){
+        return (this.salario + numeroHorasExtras * valorHorasExtras) * 0.92; //Desconta 8% do INSS
+    }
 }
