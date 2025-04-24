@@ -1,16 +1,12 @@
 package org.aplicacao.lista1;
 
 public class Usuario {
-    public String nome;
-    public char genero;
+    private String nome;
+    private char genero;
 
     public Usuario(String nome, char genero) {
         this.nome = nome;
-        char g = Character.toUpperCase(genero); //Transforma em maiúsculo
-        if (g != 'M' && g!='F'){
-            throw new IllegalArgumentException("Gênero inválido: use 'M' ou 'F'");
-        }
-        this.genero = g;
+        setGenero(genero);
     }
 
     public String getNome() {
@@ -23,6 +19,13 @@ public class Usuario {
 
     public char getGenero() {
         return genero;
+    }
+
+    public void setGenero(char genero){
+        char g = Character.toUpperCase(genero); //Transforma em maiúsculo
+        if (g != 'M' && g!='F'){
+            throw new IllegalArgumentException("Gênero inválido: use 'M' ou 'F'");
+        }
     }
 
     public double calculaContaEnergiaEletrica (double kilowattsConsumidos) {
@@ -48,11 +51,11 @@ public class Usuario {
         double imc = peso/Math.pow(altura,2);
         if (imc < 20.7){
             return "Abaixo do peso";
-        } else if (imc >=20.7 && imc<26.4) {
+        } else if (imc<26.4) {
             return "No peso normal";
-        } else if (imc >=26.4 && imc<27.8) {
+        } else if (imc<27.8) {
             return "Marginalmente acima do peso";
-        } else if (imc >=27.8 && imc<31.1) {
+        } else if (imc<31.1) {
             return "Acima do peso ideal";
         } else {
             return "Obeso";
@@ -63,11 +66,11 @@ public class Usuario {
         double imc = peso/Math.pow(altura,2);
         if (imc < 19.1){
             return "Abaixo do peso";
-        } else if (imc >=19.1 && imc<25.8) {
+        } else if (imc<25.8) {
             return "No peso normal";
-        } else if (imc >=25.8 && imc<27.3) {
+        } else if (imc<27.3) {
             return "Marginalmente acima do peso";
-        } else if (imc >=27.3 && imc<32.3) {
+        } else if (imc<32.3) {
             return "Acima do peso ideal";
         } else {
             return "Obeso";
