@@ -7,17 +7,8 @@ Na disciplina serão abordados conceitos como: **Encapsulamento, Herança, Polim
 
 ## 📄 Listas de Exercícios
 
-### ✅ Lista 01
-
-> Desenvolver soluções orientadas a objetos para os seguintes problemas:
-
-1. Calcular o aumento de salário de um funcionário com base em uma porcentagem.
-2. Calcular o salário líquido considerando salário bruto e horas extras.
-3. Calcular o valor da conta de energia com base no consumo e acréscimo de ICMS.
-4. Calcular a média de consumo de combustível.
-5. Calcular o IMC e classificar o resultado conforme a tabela.
-  
-[LISTA COMPLETA](./listas/OO_Lista_de_Exercicios_01_Entrada_e_Saída.pdf)
+#### ✅ [LISTA 01](./listas/OO_Lista_de_Exercicios_01_Entrada_e_Saída.pdf)
+#### ✅ [LISTA 02](./listas/OO_Lista_de_Exercicios_02_POO.pdf)
 
 ---
 
