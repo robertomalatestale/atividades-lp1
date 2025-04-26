@@ -3,10 +3,25 @@ package org.aplicacao.lista1;
 public class Usuario {
     private String nome;
     private char genero;
+    private double altura;
+    private double peso;
 
     public Usuario(String nome, char genero) {
         this.nome = nome;
         setGenero(genero);
+    }
+
+    public Usuario(String nome, char genero, double altura) {
+        this.nome = nome;
+        setGenero(genero);
+        setAltura(altura);
+    }
+
+    public Usuario(String nome, char genero, double altura, double peso) {
+        this.nome = nome;
+        setGenero(genero);
+        setAltura(altura);
+        setPeso(peso);
     }
 
     public String getNome() {
@@ -22,10 +37,33 @@ public class Usuario {
     }
 
     public void setGenero(char genero){
-        char g = Character.toUpperCase(genero); //Transforma em maiúsculo
+        char g = Character.toUpperCase(genero);
         if (g != 'M' && g!='F'){
             throw new IllegalArgumentException("Gênero inválido: use 'M' ou 'F'");
         }
+        this.genero = g;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        if (altura <= 0){
+            throw new IllegalArgumentException("Altura inválida, valor menor ou igual a 0");
+        }
+        this.altura = altura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        if (peso <= 0){
+            throw new IllegalArgumentException("Peso inválido, valor menor ou igual a 0");
+        }
+        this.peso = peso;
     }
 
     public double calculaContaEnergiaEletrica (double kilowattsConsumidos) {
@@ -36,19 +74,18 @@ public class Usuario {
         return quilometrosRodados/ litrosDeCombustivelConsumido;
     }
 
-    public String calculaIMC(char genero, double peso, double altura){
-        System.out.println("Peso em kg e altura em metros");
-        if (genero == 'M'){
-            return calculaIMCHomem(peso,altura);
-        } else if (genero == 'F'){
-            return calculaIMCMulher(peso,altura);
+    public String calculaIMC(){
+        if (this.genero == 'M'){
+            return calculaIMCHomem();
+        } else if (this.genero == 'F'){
+            return calculaIMCMulher();
         } else {
-            return "Não é possível fazer essa operação, gênero não especificado corretamente.";
+            throw new IllegalArgumentException("Sexo inválido");
         }
     }
 
-    public String calculaIMCHomem(double peso, double altura){
-        double imc = peso/Math.pow(altura,2);
+    public String calculaIMCHomem(){
+        double imc = this.peso/Math.pow(this.altura,2);
         if (imc < 20.7){
             return "Abaixo do peso";
         } else if (imc<26.4) {
@@ -62,8 +99,8 @@ public class Usuario {
         }
     }
 
-    public String calculaIMCMulher(double peso, double altura){
-        double imc = peso/Math.pow(altura,2);
+    public String calculaIMCMulher(){
+        double imc = this.peso/Math.pow(this.altura,2);
         if (imc < 19.1){
             return "Abaixo do peso";
         } else if (imc<25.8) {
