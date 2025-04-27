@@ -20,7 +20,7 @@ class CarroTest {
     }
 
     @Test
-    void deveLancarExcecaoSeVelocidadeNegativaAposAcelerar() {
+    void deveLancarExcecaoSeVelocidadeAceleradaNegativa() {
         QuantidadeInvalidaException exception = assertThrows(QuantidadeInvalidaException.class, () -> cronos.acelerar(-100), "Esperava exceção para velocidade negativa");
     }
 
@@ -31,7 +31,7 @@ class CarroTest {
     }
 
     @Test
-    void deveLancarExcecaoSeVelocidadeNegativaAposFrear() {
+    void deveLancarExcecaoSeVelocidadeFreadaNegativa() {
         QuantidadeInvalidaException exception = assertThrows(QuantidadeInvalidaException.class, () -> cronos.frear(-100), "Esperava exceção para velocidade negativa");
     }
 
