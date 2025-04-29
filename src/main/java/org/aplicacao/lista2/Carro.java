@@ -62,6 +62,9 @@ public class Carro {
     }
 
     public void acelerar(double quantidade){
+        if(!isEstado()){
+            throw new IllegalStateException("Carro não pode acelerar desligado");
+        }
         if (quantidade<0){
             throw new QuantidadeInvalidaException();
         }
@@ -69,6 +72,9 @@ public class Carro {
     }
 
     public void frear(double quantidade){
+        if(!isEstado()){
+            throw new IllegalStateException("Carro não pode frear desligado");
+        }
         if (quantidade<0){
             throw new QuantidadeInvalidaException();
         }
@@ -81,6 +87,7 @@ public class Carro {
 
     public void desligar(){
         setEstado(false);
+        setVelocidade_atual(0);
     }
 
 }

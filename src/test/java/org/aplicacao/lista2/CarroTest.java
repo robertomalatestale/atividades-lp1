@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CarroTest {
 
-    Carro cronos = new Carro("Fiat","Cronos",2019,30,false);
+    Carro cronos = new Carro("Fiat","Cronos",2019,30,true);
 
     @Test
     void deveLancarExcecaoSeVelocidadeNegativa() {
@@ -20,6 +20,12 @@ class CarroTest {
     }
 
     @Test
+    void deveLancarExcecaoSeTentarAcelerarDesligado(){
+        cronos.desligar();
+        IllegalStateException exception = assertThrows(IllegalStateException.class, () -> cronos.acelerar(20),"Esperava exceção se tentar acelerar com carro desligado");
+    }
+
+    @Test
     void deveLancarExcecaoSeVelocidadeAceleradaNegativa() {
         QuantidadeInvalidaException exception = assertThrows(QuantidadeInvalidaException.class, () -> cronos.acelerar(-100), "Esperava exceção para velocidade negativa");
     }
@@ -28,6 +34,12 @@ class CarroTest {
     void deveCalcularVelocidadeAposFrear() {
         cronos.frear(28);
         assertEquals(2, cronos.getVelocidade_atual());
+    }
+
+    @Test
+    void deveLancarExcecaoSeTentarFrearDesligado(){
+        cronos.desligar();
+        IllegalStateException exception = assertThrows(IllegalStateException.class, () -> cronos.frear(20),"Esperava exceção se tentar frear com carro desligado");
     }
 
     @Test
@@ -45,5 +57,11 @@ class CarroTest {
     void desligar() {
         cronos.desligar();
         assertFalse(cronos.isEstado());
+    }
+
+    @Test
+    void deveTestarSeAVelocidadeEZeradaAposDesligar(){
+        cronos.desligar();
+        assertEquals(0,cronos.getVelocidade_atual());
     }
 }
