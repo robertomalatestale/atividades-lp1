@@ -9,6 +9,7 @@ Na disciplina serão abordados conceitos como: **Encapsulamento, Herança, Polim
 
 #### ✅ [LISTA 01](./listas/OO_Lista_de_Exercicios_01_Entrada_e_Saída.pdf)
 #### ✅ [LISTA 02](./listas/OO_Lista_de_Exercicios_02_POO.pdf)
+#### ✅ [LISTA 03](./listas/OO_Lista_de_Exercicios_03_Herança_e_Polimorfismo.pdf)
 
 ---
 
