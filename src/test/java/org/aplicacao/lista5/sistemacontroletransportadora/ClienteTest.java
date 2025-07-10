@@ -1,8 +1,5 @@
 package org.aplicacao.lista5.sistemacontroletransportadora;
 
-import org.aplicacao.lista5.sistemacontrolebancario.Cliente;
-import org.aplicacao.lista5.sistemacontrolebancario.ContaBancaria;
-import org.aplicacao.lista5.sistemacontrolebancario.ContaPoupanca;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -21,7 +18,7 @@ class ClienteTest {
     @Test
     void deveAdicionarFretesNaListaCorretamente(){
         org.aplicacao.lista5.sistemacontroletransportadora.Cliente cliente = new org.aplicacao.lista5.sistemacontroletransportadora.Cliente("José","1452");
-        Frete frete = new FreteNormal(21);
+        Frete frete = new FreteNormal(21, cliente);
         cliente.adicionarFrete(frete);
         List<Frete> list = new ArrayList<>();
         list.add(frete);
@@ -31,8 +28,8 @@ class ClienteTest {
     @Test
     void deveListarTodosFrentesComValorTotal(){
         org.aplicacao.lista5.sistemacontroletransportadora.Cliente cliente = new org.aplicacao.lista5.sistemacontroletransportadora.Cliente("José","1452");
-        Frete frete1 = new FreteNormal(21);
-        Frete frete2 = new FreteNormal(48);
+        Frete frete1 = new FreteNormal(21, cliente);
+        Frete frete2 = new FreteNormal(48, cliente);
         cliente.adicionarFrete(frete1);
         cliente.adicionarFrete(frete2);
         assertEquals("Fretes do cliente José\n" +

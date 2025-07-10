@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class EmprestimoDiferenciado extends Emprestimo{
     protected double valorDiario;
 
-    public EmprestimoDiferenciado(String nomeFilme, int diasAlugados, double valorDiario) {
-        super(nomeFilme,diasAlugados);
+    public EmprestimoDiferenciado(String nomeFilme, int diasAlugados, Cliente cliente , double valorDiario) {
+        super(nomeFilme,diasAlugados, cliente);
         setValorDiario(valorDiario);
     }
 

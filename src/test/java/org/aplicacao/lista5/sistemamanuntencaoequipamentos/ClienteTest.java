@@ -12,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ClienteTest {
 
+
+
     @Test
     void deveLancarExcecaoSeNomeNaoPreenchido(){
         org.aplicacao.lista5.sistemamanuntencaoequipamentos.Cliente cliente = new org.aplicacao.lista5.sistemamanuntencaoequipamentos.Cliente("Rodrigo","9DN8K");
@@ -21,7 +23,8 @@ class ClienteTest {
     @Test
     void deveAdicionarContasNaListaCorretamente(){
         org.aplicacao.lista5.sistemamanuntencaoequipamentos.Cliente cliente = new org.aplicacao.lista5.sistemamanuntencaoequipamentos.Cliente("Rodrigo","9DN8K");
-        Manuntencao manuntencao = new Manuntencao();
+        Impressora impressora = new Impressora(120,50);
+        Manuntencao manuntencao = new Manuntencao(impressora);
         cliente.adicionarEquipamentoEmManuntencao(manuntencao);
         List<Manuntencao> list = new ArrayList<Manuntencao>();
         list.add(manuntencao);
@@ -31,12 +34,10 @@ class ClienteTest {
     @Test
     void deveListarManuntencoesComValorTotal(){
         org.aplicacao.lista5.sistemamanuntencaoequipamentos.Cliente cliente = new org.aplicacao.lista5.sistemamanuntencaoequipamentos.Cliente("Rodrigo","9DN8K");
-        Manuntencao manuntencao1 = new Manuntencao();
-        Manuntencao manuntencao2 = new Manuntencao();
         Monitor monitor = new Monitor(500);
         Impressora impressora = new Impressora(300,120);
-        manuntencao1.setEquipamentoEmManuntencao(monitor);
-        manuntencao2.setEquipamentoEmManuntencao(impressora);
+        Manuntencao manuntencao1 = new Manuntencao(monitor);
+        Manuntencao manuntencao2 = new Manuntencao(impressora);
         cliente.adicionarEquipamentoEmManuntencao(manuntencao1);
         cliente.adicionarEquipamentoEmManuntencao(manuntencao2);
         assertEquals("Manuntencoes registradas do cliente Rodrigo\n" +

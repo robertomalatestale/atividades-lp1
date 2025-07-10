@@ -5,6 +5,11 @@ public abstract class ContaBancaria {
     protected String numeroConta;
     protected double saldo;
 
+    public ContaBancaria(Cliente dono, String numeroConta) {
+       setDono(dono);
+       setNumeroConta(numeroConta);
+    }
+
     public Cliente getDono() {
         return dono;
     }

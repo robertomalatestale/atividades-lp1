@@ -21,7 +21,8 @@ class HospedeTest {
     @Test
     void deveAdicionarContasNaListaCorretamente(){
         Hospede hospede = new Hospede("Tassio","4743");
-        Reserva reserva = new Reserva();
+        QuartoTriplo quartoTriplo1 = new QuartoTriplo(3,5);
+        Reserva reserva = new Reserva(quartoTriplo1);
         hospede.adicionarReserva(reserva);
         List<Reserva> list = new ArrayList<Reserva>();
         list.add(reserva);
@@ -31,12 +32,10 @@ class HospedeTest {
     @Test
     void deveImprimirReservasComValorDeUmHospedeCorretamente(){
         Hospede hospede = new Hospede("Tassio","4743");
-        Reserva reserva1 = new Reserva();
         QuartoTriplo quartoTriplo1 = new QuartoTriplo(3,5);
-        Reserva reserva2 = new Reserva();
+        Reserva reserva1 = new Reserva(quartoTriplo1);
         QuartoTriplo quartoTriplo2 = new QuartoTriplo(5,3);
-        reserva1.setQuarto(quartoTriplo1);
-        reserva2.setQuarto(quartoTriplo2);
+        Reserva reserva2 = new Reserva(quartoTriplo2);
         hospede.adicionarReserva(reserva1);
         hospede.adicionarReserva(reserva2);
         assertEquals("Reservas de Tassio\n" +

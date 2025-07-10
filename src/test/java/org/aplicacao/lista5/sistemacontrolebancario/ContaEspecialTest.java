@@ -8,7 +8,8 @@ class ContaEspecialTest {
 
     @Test
     void deveInformarSaldoCorretamente(){
-        ContaEspecial contaEspecial = new ContaEspecial();
+        Cliente cliente = new Cliente("Anderson","8458-6");
+        ContaEspecial contaEspecial = new ContaEspecial(cliente,"3133-1");
         contaEspecial.setSaldo(30);
         assertEquals(280,contaEspecial.informarSaldoDisponivel());
     }

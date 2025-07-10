@@ -4,8 +4,8 @@ public class FreteUrgente extends Frete{
     private double taxaEntrega;
     private int numeroDeItens;
 
-    public FreteUrgente(double valor, double taxaEntrega, int numeroDeItens) {
-        super(valor);
+    public FreteUrgente(double valor, Cliente cliente, double taxaEntrega, int numeroDeItens) {
+        super(valor, cliente);
         setTaxaEntrega(taxaEntrega);
         setNumeroDeItens(numeroDeItens);
     }

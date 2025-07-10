@@ -19,7 +19,7 @@ class CursoTest {
 
     @Test
     void deveAdicionarAlunosNoCursoCorretamente(){
-        Aluno aluno = new AlunoBolsistaParcial("Rogerio","2024000313", "Rua Doze" , 120, 120, 50);
+        Aluno aluno = new AlunoBolsistaParcial("Rogerio","2024000313", "Rua Doze" , 120, 120, curso, 50);
         curso.registrarAlunoNoCurso(aluno);
         List<Aluno> list = new ArrayList<Aluno>();
         list.add(aluno);
@@ -28,8 +28,8 @@ class CursoTest {
 
     @Test
     void deveListarAlunosDoCursoComValoresMensalidade(){
-        Aluno alunoBolsistaParcial = new AlunoBolsistaParcial("Rogerio","2024000313", "Rua Doze" , 120, 120, 50);
-        Aluno alunoMensalista = new AlunoMensalista("Ronaldo","2024000120","Rua São João", 12, 120);
+        Aluno alunoBolsistaParcial = new AlunoBolsistaParcial("Rogerio","2024000313", "Rua Doze" , 120, 120, curso, 50);
+        Aluno alunoMensalista = new AlunoMensalista("Ronaldo","2024000120","Rua São João", 12, 120, curso);
         curso.registrarAlunoNoCurso(alunoBolsistaParcial);
         curso.registrarAlunoNoCurso(alunoMensalista);
         assertEquals("Aluno: Rogerio Matrícula: 2024000313 Valor da mensalidade: R$60.0\n" +

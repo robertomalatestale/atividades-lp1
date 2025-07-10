@@ -6,11 +6,13 @@ public abstract class Emprestimo {
     protected String nomeFilme;
     protected LocalDate dataEmprestimo;
     protected int diasAlugados;
+    protected Cliente cliente;
 
-    public Emprestimo(String nomeFilme, int diasAlugados) {
+    public Emprestimo(String nomeFilme, int diasAlugados, Cliente cliente) {
         setNomeFilme(nomeFilme);
         this.dataEmprestimo = LocalDate.now();
         setDiasAlugados(diasAlugados);
+        setCliente(cliente);
     }
 
     public LocalDate getDataEmprestimo() {
@@ -34,6 +36,17 @@ public abstract class Emprestimo {
 
     public void setNomeFilme(String nomeFilme) {
         this.nomeFilme = nomeFilme;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        if(cliente == null){
+            throw new IllegalArgumentException("Empréstimo deve ter um cliente associado");
+        }
+        this.cliente = cliente;
     }
 
     public abstract double calculaValor();

@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class EmprestimoCatalogo extends Emprestimo{
 
 
-    public EmprestimoCatalogo(String nomeFilme, int diasAlugados) {
-        super(nomeFilme, diasAlugados);
+    public EmprestimoCatalogo(String nomeFilme, int diasAlugados, Cliente cliente) {
+        super(nomeFilme, diasAlugados, cliente);
     }
 
     @Override

@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FreteUrgenteTest {
 
-    FreteUrgente freteUrgente = new FreteUrgente(100,20,3);
+    org.aplicacao.lista5.sistemacontroletransportadora.Cliente cliente = new org.aplicacao.lista5.sistemacontroletransportadora.Cliente("José","1452");
+    FreteUrgente freteUrgente = new FreteUrgente(100, cliente, 20,3);
 
     @Test
     void deveLancarExcecaoSeTaxaDeEntregaNegativa(){

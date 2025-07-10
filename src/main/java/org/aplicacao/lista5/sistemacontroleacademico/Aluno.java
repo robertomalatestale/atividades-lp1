@@ -5,12 +5,14 @@ public abstract class Aluno {
     protected String matricula;
     protected String endereco;
     protected int numeroDeParcelas;
+    protected Curso curso;
 
-    public Aluno(String nome, String matricula, String endereco, int numeroDeParcelas) {
+    public Aluno(String nome, String matricula, String endereco, int numeroDeParcelas, Curso curso) {
         setNome(nome);
         setMatricula(matricula);
         setEndereco(endereco);
         setNumeroDeParcelas(numeroDeParcelas);
+        setCurso(curso);
     }
 
     public String getNome() {
@@ -52,6 +54,17 @@ public abstract class Aluno {
             throw new IllegalArgumentException("Número de parcelas deve ser positivo");
         }
         this.numeroDeParcelas = numeroDeParcelas;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        if (curso == null) {
+            throw new IllegalArgumentException("Aluno deve estar em um curso");
+        }
+        this.curso = curso;
     }
 
     public abstract double getValorMensalidade();

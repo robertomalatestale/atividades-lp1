@@ -6,7 +6,8 @@ public class Manuntencao {
     private Equipamento equipamentoEmManuntencao;
     private int numeroManuntencao;
 
-    public Manuntencao() {
+    public Manuntencao(Equipamento equipamentoEmManuntencao) {
+        setEquipamentoEmManuntencao(equipamentoEmManuntencao);
         this.numeroManuntencao = ThreadLocalRandom.current().nextInt(1, 100000);
     }
 
@@ -15,6 +16,9 @@ public class Manuntencao {
     }
 
     public void setEquipamentoEmManuntencao(Equipamento equipamentoEmManuntencao) {
+        if(equipamentoEmManuntencao == null){
+            throw new IllegalArgumentException("Precisa associar um equipamento a manuntenção");
+        }
         this.equipamentoEmManuntencao = equipamentoEmManuntencao;
     }
 

@@ -3,8 +3,8 @@ package org.aplicacao.lista5.sistemacontroletransportadora;
 public class FreteEspecial extends Frete{
     private double taxaEntrega;
 
-    public FreteEspecial(double valor, double taxaEntrega) {
-        super(valor);
+    public FreteEspecial(double valor, Cliente cliente, double taxaEntrega) {
+        super(valor, cliente);
         setTaxaEntrega(taxaEntrega);
     }
 

@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EmprestimoEspecialTest {
 
-    EmprestimoEspecial emprestimoEspecial = new EmprestimoEspecial("Matrix",5,10);
+    Cliente cliente = new Cliente("Wellington", "3495-2");
+    EmprestimoEspecial emprestimoEspecial = new EmprestimoEspecial("Matrix",5,cliente, 10);
 
     @Test
     void deveCalcularValorCorretamente(){

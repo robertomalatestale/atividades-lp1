@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class EmprestimoLancamentoTest {
-    EmprestimoLancamento emprestimoLancamento = new EmprestimoLancamento("Matrix",5,10);
+
+    Cliente cliente = new Cliente("Wellington", "3495-2");
+    EmprestimoLancamento emprestimoLancamento = new EmprestimoLancamento("Matrix",5,cliente, 10);
 
     @Test
     void deveLancarExcecaoSeValorDiarioNegativoOuZero(){

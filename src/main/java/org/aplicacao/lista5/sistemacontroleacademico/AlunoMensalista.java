@@ -3,8 +3,8 @@ package org.aplicacao.lista5.sistemacontroleacademico;
 public class AlunoMensalista extends Aluno {
     protected double valorMensalidade;
 
-    public AlunoMensalista(String nome, String matricula, String endereco, int numeroDeParcelas, double valorMensalidade) {
-        super(nome, matricula, endereco, numeroDeParcelas);
+    public AlunoMensalista(String nome, String matricula, String endereco, int numeroDeParcelas, double valorMensalidade, Curso curso) {
+        super(nome, matricula, endereco, numeroDeParcelas, curso);
         setValorMensalidade(valorMensalidade);
     }
 

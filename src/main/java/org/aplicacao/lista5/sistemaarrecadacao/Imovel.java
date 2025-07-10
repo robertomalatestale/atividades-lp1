@@ -3,6 +3,7 @@ package org.aplicacao.lista5.sistemaarrecadacao;
 public abstract class Imovel {
     private Contribuinte dono;
 
+
     public Contribuinte getDono() {
         return dono;
     }

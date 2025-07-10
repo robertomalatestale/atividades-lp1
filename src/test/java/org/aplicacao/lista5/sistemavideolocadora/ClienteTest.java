@@ -21,7 +21,7 @@ class ClienteTest {
 
     @Test
     void deveAdicionarEmprestimosNaListaCorretamente(){
-        EmprestimoEspecial emprestimoEspecial = new EmprestimoEspecial("Matrix",5,8.50);
+        EmprestimoEspecial emprestimoEspecial = new EmprestimoEspecial("Matrix",5,cliente, 8.50);
         cliente.adicionarEmprestimo(emprestimoEspecial);
         List<Emprestimo> list = new ArrayList<Emprestimo>();
         list.add(emprestimoEspecial);
@@ -30,8 +30,8 @@ class ClienteTest {
 
     @Test
     void deveImprimirReservasComValorDeUmHospedeCorretamente(){
-        EmprestimoEspecial emprestimoEspecial = new EmprestimoEspecial("Matrix",5,8.50);
-        EmprestimoCatalogo emprestimoCatalogo = new EmprestimoCatalogo("Harry Potter",9);
+        EmprestimoEspecial emprestimoEspecial = new EmprestimoEspecial("Matrix",5,cliente, 8.50);
+        EmprestimoCatalogo emprestimoCatalogo = new EmprestimoCatalogo("Harry Potter",9, cliente);
         cliente.adicionarEmprestimo(emprestimoCatalogo);
         cliente.adicionarEmprestimo(emprestimoEspecial);
         assertEquals("Empréstimos do cliente: Wellington\n" +

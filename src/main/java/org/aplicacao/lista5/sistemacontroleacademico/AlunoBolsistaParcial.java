@@ -3,8 +3,8 @@ package org.aplicacao.lista5.sistemacontroleacademico;
 public class AlunoBolsistaParcial extends AlunoMensalista {
     private double percentualDesconto;
 
-    public AlunoBolsistaParcial(String nome, String matricula, String endereco, int numeroDeParcelas, double valorMensalidade, double percentualDesconto) {
-        super(nome, matricula, endereco, numeroDeParcelas, valorMensalidade);
+    public AlunoBolsistaParcial(String nome, String matricula, String endereco, int numeroDeParcelas, double valorMensalidade, Curso curso, double percentualDesconto) {
+        super(nome, matricula, endereco, numeroDeParcelas, valorMensalidade, curso);
         setPercentualDesconto(percentualDesconto);
     }
 

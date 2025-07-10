@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ContaCorrenteTest {
 
-    ContaCorrente contaCorrente = new ContaCorrente();
+    Cliente cliente = new Cliente("Anderson","8458-6");
+    ContaCorrente contaCorrente = new ContaCorrente(cliente,"93831-9");
 
     @Test
     void deveLancarExcecaoSeDonoDaContaForNulo(){

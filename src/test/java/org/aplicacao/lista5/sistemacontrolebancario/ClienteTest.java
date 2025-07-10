@@ -22,7 +22,7 @@ class ClienteTest {
     @Test
     void deveAdicionarContasNaListaCorretamente(){
         Cliente cliente = new Cliente("Anderson","8458-6");
-        ContaPoupanca contaPoupanca = new ContaPoupanca();
+        ContaPoupanca contaPoupanca = new ContaPoupanca(cliente,"2123-2");
         cliente.adicionarConta(contaPoupanca);
         List<ContaBancaria> list = new ArrayList<ContaBancaria>();
         list.add(contaPoupanca);
@@ -32,8 +32,8 @@ class ClienteTest {
     @Test
     void deveListarContasBancariasComSaldo(){
         Cliente cliente = new Cliente("Anderson","8458-6");
-        ContaPoupanca contaPoupanca = new ContaPoupanca();
-        ContaEspecial contaEspecial = new ContaEspecial();
+        ContaPoupanca contaPoupanca = new ContaPoupanca(cliente,"2123-2");
+        ContaEspecial contaEspecial = new ContaEspecial(cliente, "2193-2");
         contaPoupanca.setSaldo(500);
         contaEspecial.setSaldo(750);
         cliente.adicionarConta(contaPoupanca);

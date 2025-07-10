@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AlunoBolsistaParcialTest {
 
-    AlunoBolsistaParcial alunoBolsistaParcial = new AlunoBolsistaParcial("Rogerio","2024000313", "Rua Doze" , 120, 120, 50);
+    Curso curso = new Curso("INF2004",60,"Curso de Modelagem de Sistemas");
+    AlunoBolsistaParcial alunoBolsistaParcial = new AlunoBolsistaParcial("Rogerio","2024000313", "Rua Doze" , 120, 120, curso, 50);
 
     @Test
     void deveLancarExcecaoSeValorDescontoNegativoOuZero(){
