@@ -1,5 +1,6 @@
 package org.aplicacao.lista5.sistemacontroleacademico;
 
+import org.aplicacao.lista5.sistemaarrecadacao.Contribuinte;
 import org.aplicacao.lista5.sistemacontrolebancario.ContaBancaria;
 import org.junit.jupiter.api.Test;
 
@@ -15,6 +16,11 @@ class CursoTest {
     @Test
     void deveLancarExcecaoSeCargaHorarioNegativaOuZero(){
         assertThrows(IllegalArgumentException.class, ()-> curso.setCargaHoraria(0));
+    }
+
+    @Test
+    void deveInicializarListaDeAlunosCorretamente(){
+        assertEquals(0,(curso.getAlunos().size()));
     }
 
     @Test

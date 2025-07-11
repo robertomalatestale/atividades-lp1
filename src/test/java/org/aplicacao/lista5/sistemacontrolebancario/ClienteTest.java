@@ -20,6 +20,13 @@ class ClienteTest {
     }
 
     @Test
+    void deveInicializarListaDeContasCorretamente(){
+        Cliente cliente = new Cliente("Anderson","8458-6");
+        assertEquals(0,(cliente.getContas().size()));
+    }
+
+
+    @Test
     void deveAdicionarContasNaListaCorretamente(){
         Cliente cliente = new Cliente("Anderson","8458-6");
         ContaPoupanca contaPoupanca = new ContaPoupanca(cliente,"2123-2");

@@ -20,6 +20,11 @@ class ClienteTest {
     }
 
     @Test
+    void deveInicializarListaDeVagasAlugadasCorretamente(){
+        assertEquals(0,(cliente.getVagasAlugadas().size()));
+    }
+
+    @Test
     void deveAdicionarContasNaListaCorretamente(){
         VagaMensal vagaMensal = new VagaMensal(10,"BRA2E19",3);
         cliente.adicionarVaga(vagaMensal);

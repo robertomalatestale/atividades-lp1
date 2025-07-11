@@ -20,6 +20,11 @@ class ClienteTest {
     }
 
     @Test
+    void deveInicializarListaDeEmprestimosCorretamente(){
+        assertEquals(0,(cliente.getEmprestimos().size()));
+    }
+
+    @Test
     void deveAdicionarEmprestimosNaListaCorretamente(){
         EmprestimoEspecial emprestimoEspecial = new EmprestimoEspecial("Matrix",5,cliente, 8.50);
         cliente.adicionarEmprestimo(emprestimoEspecial);

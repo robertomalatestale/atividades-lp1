@@ -19,6 +19,12 @@ class HospedeTest {
     }
 
     @Test
+    void deveInicializarListaDeReservaCorretamente(){
+        Hospede hospede = new Hospede("Tassio","4743");
+        assertEquals(0,(hospede.getReservas().size()));
+    }
+
+    @Test
     void deveAdicionarContasNaListaCorretamente(){
         Hospede hospede = new Hospede("Tassio","4743");
         QuartoTriplo quartoTriplo1 = new QuartoTriplo(3,5);

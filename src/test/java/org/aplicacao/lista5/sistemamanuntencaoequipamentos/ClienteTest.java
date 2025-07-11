@@ -21,6 +21,13 @@ class ClienteTest {
     }
 
     @Test
+    void deveInicializarListaDeManuntencoesCorretamente(){
+        org.aplicacao.lista5.sistemamanuntencaoequipamentos.Cliente cliente = new org.aplicacao.lista5.sistemamanuntencaoequipamentos.Cliente("Rodrigo","9DN8K");
+        assertEquals(0,(cliente.getEquipamentosEmManuntecao().size()));
+    }
+
+
+    @Test
     void deveAdicionarContasNaListaCorretamente(){
         org.aplicacao.lista5.sistemamanuntencaoequipamentos.Cliente cliente = new org.aplicacao.lista5.sistemamanuntencaoequipamentos.Cliente("Rodrigo","9DN8K");
         Impressora impressora = new Impressora(120,50);

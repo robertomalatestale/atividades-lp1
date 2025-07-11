@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FreteNormalTest {
 
-    org.aplicacao.lista5.sistemacontroletransportadora.Cliente cliente = new org.aplicacao.lista5.sistemacontroletransportadora.Cliente("José","1452");
+    Cliente cliente = new Cliente("José","1452");
     FreteNormal freteNormal = new FreteNormal(100, cliente);
 
     @Test

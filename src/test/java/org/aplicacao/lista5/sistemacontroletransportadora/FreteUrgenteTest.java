@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FreteUrgenteTest {
 
-    org.aplicacao.lista5.sistemacontroletransportadora.Cliente cliente = new org.aplicacao.lista5.sistemacontroletransportadora.Cliente("José","1452");
+    Cliente cliente = new Cliente("José","1452");
     FreteUrgente freteUrgente = new FreteUrgente(100, cliente, 20,3);
 
     @Test

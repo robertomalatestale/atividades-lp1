@@ -16,6 +16,12 @@ class ContribuinteTest {
     }
 
     @Test
+    void deveInicializarListaDeImoveisCorretamente(){
+        Contribuinte contribuinte = new Contribuinte("Jefferson","F31SA");
+        assertEquals(0,(contribuinte.getImoveis().size()));
+    }
+
+    @Test
     void deveAdicionarImoveisNaListaCorretamente(){
         Contribuinte contribuinte = new Contribuinte("Jefferson","F31SA");
         Apartamento apartamento = new Apartamento(50,3);
