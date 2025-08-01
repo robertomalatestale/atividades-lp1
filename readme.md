@@ -12,6 +12,7 @@ Na disciplina serão abordados conceitos como: **Encapsulamento, Herança, Polim
 #### ✅ [LISTA 03](./listas/OO_Lista_de_Exercicios_03_Herança_e_Polimorfismo.pdf)
 #### ✅ [LISTA 04](./listas/OO_Lista_de_Exercicios_04_Relacionamentos_Classes.pdf)
 #### ✅ [LISTA 05](./listas/OO_Lista_de_Exercicios_05_Associacao_e_Interfaces.pdf)
+#### ✅ [PROVA FINAL](./listas/Prova_OO_Fim_Do_Semestre.pdf)
 
 ---
 
@@ -19,7 +20,7 @@ Na disciplina serão abordados conceitos como: **Encapsulamento, Herança, Polim
 
 - Java 17
 - Maven
-- JUnit
+- JUnit 5
 
 ---
 
